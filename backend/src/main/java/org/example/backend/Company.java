@@ -22,7 +22,7 @@ public class Company {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;         // 순번 (DB 자동 생성)
+    private Long id;         // 순번 (DB 자동 생성)
 
     private String name;        // 기업명
     private String industry;    // 업종
@@ -49,7 +49,7 @@ public class Company {
         else if (this.icr < 1.5 || Integer.parseInt(this.debtRatio.replace("%", "")) > 200) {
             this.status = "주의";
         }
-        else {
+         else {
             this.status = "정상";
         }
     }
